@@ -13,6 +13,8 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set t_Co=256
+set cursorline
 
 set colorcolumn=100
 highlight ColorColumn ctermbg=0 guibg=lightgrey
@@ -27,7 +29,7 @@ Plug 'vim-utils/vim-man'
 Plug 'lyuts/vim-rtags'
 Plug 'mbbill/undotree'
 Plug 'itchyny/lightline.vim'
-Plug 'sonph/onehalf'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'junegunn/vim-easy-align'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -38,6 +40,11 @@ else
 endif
 
 call plug#end()
+
+
+colorscheme gruvbox
+let bg='dark'
+let g:lightline = { 'colorscheme': 'onehalfdark' }
 
 if executable('rg')
     let g:rg_derive_root='true'
