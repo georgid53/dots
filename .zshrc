@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="rkj-repos"
+ZSH_THEME="gnzh"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -103,3 +103,7 @@ alias ls='ls --color=auto'
 uwufetch -i
 
 alias config='/usr/bin/git --git-dir=/home/georgi/.cfg --work-tree=/home/georgi'
+alias tablet='sudo rmmod wacom && otd&'
+alias update='sudo pacman -Syyyu'
+alias s='startx ~/.xinitrc'
+alias x='xrandr --output HDMI-0 --mode 2560x1440 --rate 144 --output DVI-D-0 --mode 1920x1080 --rate 144'
